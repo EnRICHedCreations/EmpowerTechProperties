@@ -176,6 +176,12 @@
                             class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent font-medium"
                             oninput="searchLeads()"
                         >
+                        <button onclick="openAddLeadModal()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-bold flex items-center justify-center space-x-2 shadow-md">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <span>Add Lead</span>
+                        </button>
                         <button onclick="refreshLeads()" class="px-4 py-2 gradient-gold text-white rounded-lg hover:shadow-lg transition font-bold flex items-center justify-center space-x-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
@@ -400,7 +406,13 @@
                             class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent font-medium"
                             oninput="searchJVDeals()"
                         >
-                        <button onclick="refreshJVDeals()" class="px-4 py-2 gradient-gold text-brand-charcoal rounded-lg hover:shadow-lg transition font-bold flex items-center justify-center space-x-2">
+                        <button onclick="openAddJVModal()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-bold flex items-center justify-center space-x-2 shadow-md">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <span>Add JV Deal</span>
+                        </button>
+                        <button onclick="refreshJVDeals()" class="px-4 py-2 gradient-gold text-white rounded-lg hover:shadow-lg transition font-bold flex items-center justify-center space-x-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                             </svg>
@@ -556,6 +568,184 @@
     </div>
     <!-- End Container -->
 
+    <!-- Add/Edit Property Lead Modal -->
+    <div id="addEditLeadModal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto border-2 border-gray-300">
+            <div class="sticky top-0 gradient-gold text-white px-6 py-4 flex justify-between items-center rounded-t-2xl">
+                <h3 class="font-bebas text-3xl tracking-wide" id="leadModalTitle">ADD PROPERTY LEAD</h3>
+                <button onclick="closeAddEditLeadModal()" class="text-white hover:text-gray-200 text-3xl font-bold">&times;</button>
+            </div>
+
+            <form id="addEditLeadForm" class="p-6 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">First Name*</label>
+                        <input type="text" id="leadFirstName" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Last Name*</label>
+                        <input type="text" id="leadLastName" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Email*</label>
+                        <input type="email" id="leadEmail" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Phone*</label>
+                        <input type="tel" id="leadPhone" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Property Address*</label>
+                    <input type="text" id="leadPropertyAddress" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Property Type*</label>
+                        <select id="leadPropertyType" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                            <option value="">Select Type</option>
+                            <option value="single-family">Single Family Home</option>
+                            <option value="multi-family">Multi-Family</option>
+                            <option value="condo">Condo/Townhouse</option>
+                            <option value="land">Land/Lot</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Property Condition*</label>
+                        <select id="leadPropertyCondition" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                            <option value="">Select Condition</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="fair">Fair</option>
+                            <option value="needs-work">Needs Work</option>
+                            <option value="major-repairs">Major Repairs Needed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Timeline*</label>
+                        <select id="leadTimeline" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                            <option value="">Select Timeline</option>
+                            <option value="asap">ASAP (Within 2 weeks)</option>
+                            <option value="1-month">Within 1 Month</option>
+                            <option value="1-3-months">1-3 Months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Status</label>
+                        <select id="leadStatus" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                            <option value="new">New</option>
+                            <option value="contacted">Contacted</option>
+                            <option value="qualified">Qualified</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Additional Information</label>
+                    <textarea id="leadAdditionalInfo" rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent"></textarea>
+                </div>
+
+                <div class="sticky bottom-0 bg-white border-t-2 border-gray-200 pt-4 flex justify-end space-x-3">
+                    <button type="button" onclick="closeAddEditLeadModal()" class="px-6 py-3 bg-gray-400 text-white rounded-lg hover:bg-gray-500 transition font-bold">
+                        Cancel
+                    </button>
+                    <button type="submit" class="px-6 py-3 gradient-gold text-white rounded-lg hover:shadow-lg transition font-bold">
+                        Save Lead
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add/Edit JV Deal Modal -->
+    <div id="addEditJVModal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto border-2 border-gray-300">
+            <div class="sticky top-0 gradient-gold text-white px-6 py-4 flex justify-between items-center rounded-t-2xl">
+                <h3 class="font-bebas text-3xl tracking-wide" id="jvModalTitle">ADD JV DEAL</h3>
+                <button onclick="closeAddEditJVModal()" class="text-white hover:text-gray-200 text-3xl font-bold">&times;</button>
+            </div>
+
+            <form id="addEditJVForm" class="p-6 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">First Name*</label>
+                        <input type="text" id="jvFirstName" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Last Name*</label>
+                        <input type="text" id="jvLastName" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Email*</label>
+                        <input type="email" id="jvEmailAddress" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Phone*</label>
+                        <input type="tel" id="jvPhoneNumber" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Deal Address*</label>
+                    <input type="text" id="jvDealAddress" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Contract Price*</label>
+                        <input type="number" id="jvContractPrice" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">ARV*</label>
+                        <input type="number" id="jvARV" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Repairs Estimate*</label>
+                        <input type="number" id="jvRepairsEstimate" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">JV Agreement*</label>
+                        <select id="jvAgreement" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                            <option value="">Select Option</option>
+                            <option value="yes">Yes - 50/50 Split</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Status</label>
+                        <select id="jvStatus" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent">
+                            <option value="new">New</option>
+                            <option value="reviewing">Reviewing</option>
+                            <option value="approved">Approved</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sticky bottom-0 bg-white border-t-2 border-gray-200 pt-4 flex justify-end space-x-3">
+                    <button type="button" onclick="closeAddEditJVModal()" class="px-6 py-3 bg-gray-400 text-white rounded-lg hover:bg-gray-500 transition font-bold">
+                        Cancel
+                    </button>
+                    <button type="submit" class="px-6 py-3 gradient-gold text-white rounded-lg hover:shadow-lg transition font-bold">
+                        Save JV Deal
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Firebase SDK v8 -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
@@ -580,6 +770,8 @@
         let currentLeadId = null;
         let jvDeals = [];
         let currentJVId = null;
+        let editingLeadId = null;
+        let editingJVId = null;
 
         // Tab Switching
         function switchTab(tabName) {
@@ -667,6 +859,7 @@
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                         <button onclick="viewLead(${lead.id})" class="text-brand-purple hover:text-blue-900 font-bold">View</button>
+                        <button onclick="openEditLeadModal(${lead.id})" class="text-green-600 hover:text-green-900 font-bold">Edit</button>
                         <button onclick="deleteLead(${lead.id})" class="text-red-600 hover:text-red-900 font-bold">Delete</button>
                     </td>
                 </tr>
@@ -736,6 +929,7 @@
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                         <button onclick="viewLead(${lead.id})" class="text-brand-purple hover:text-blue-900 font-bold">View</button>
+                        <button onclick="openEditLeadModal(${lead.id})" class="text-green-600 hover:text-green-900 font-bold">Edit</button>
                         <button onclick="deleteLead(${lead.id})" class="text-red-600 hover:text-red-900 font-bold">Delete</button>
                     </td>
                 </tr>
@@ -944,6 +1138,7 @@
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                         <button onclick="viewJVDeal(${deal.id})" class="text-brand-purple hover:text-brand-purple-dark font-bold">View</button>
+                        <button onclick="openEditJVModal(${deal.id})" class="text-green-600 hover:text-green-900 font-bold">Edit</button>
                         <button onclick="deleteJVDeal(${deal.id})" class="text-red-600 hover:text-red-900 font-bold">Delete</button>
                     </td>
                 </tr>
@@ -1013,6 +1208,7 @@
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                         <button onclick="viewJVDeal(${deal.id})" class="text-brand-purple hover:text-brand-purple-dark font-bold">View</button>
+                        <button onclick="openEditJVModal(${deal.id})" class="text-green-600 hover:text-green-900 font-bold">Edit</button>
                         <button onclick="deleteJVDeal(${deal.id})" class="text-red-600 hover:text-red-900 font-bold">Delete</button>
                     </td>
                 </tr>
@@ -1142,6 +1338,177 @@
             jvDeals = newDeals;
             updateJVTable();
             updateJVStats();
+        });
+
+        // ========== ADD/EDIT PROPERTY LEAD MODAL FUNCTIONS ==========
+        function openAddLeadModal() {
+            editingLeadId = null;
+            document.getElementById('leadModalTitle').textContent = 'ADD PROPERTY LEAD';
+            document.getElementById('addEditLeadForm').reset();
+            document.getElementById('leadStatus').value = 'new';
+            document.getElementById('addEditLeadModal').classList.remove('hidden');
+        }
+
+        function openEditLeadModal(id) {
+            const lead = sellerLeads.find(l => l.id == id);
+            if (!lead) return;
+
+            editingLeadId = id;
+            document.getElementById('leadModalTitle').textContent = 'EDIT PROPERTY LEAD';
+
+            document.getElementById('leadFirstName').value = lead.firstName || '';
+            document.getElementById('leadLastName').value = lead.lastName || '';
+            document.getElementById('leadEmail').value = lead.email || '';
+            document.getElementById('leadPhone').value = lead.phone || '';
+            document.getElementById('leadPropertyAddress').value = lead.propertyAddress || '';
+            document.getElementById('leadPropertyType').value = lead.propertyType || '';
+            document.getElementById('leadPropertyCondition').value = lead.propertyCondition || '';
+            document.getElementById('leadTimeline').value = lead.timeline || '';
+            document.getElementById('leadStatus').value = lead.status || 'new';
+            document.getElementById('leadAdditionalInfo').value = lead.additionalInfo || '';
+
+            document.getElementById('addEditLeadModal').classList.remove('hidden');
+        }
+
+        function closeAddEditLeadModal() {
+            document.getElementById('addEditLeadModal').classList.add('hidden');
+            document.getElementById('addEditLeadForm').reset();
+            editingLeadId = null;
+        }
+
+        document.getElementById('addEditLeadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('leadFirstName').value.trim(),
+                lastName: document.getElementById('leadLastName').value.trim(),
+                email: document.getElementById('leadEmail').value.trim(),
+                phone: document.getElementById('leadPhone').value.trim(),
+                propertyAddress: document.getElementById('leadPropertyAddress').value.trim(),
+                propertyType: document.getElementById('leadPropertyType').value,
+                propertyCondition: document.getElementById('leadPropertyCondition').value,
+                timeline: document.getElementById('leadTimeline').value,
+                status: document.getElementById('leadStatus').value,
+                additionalInfo: document.getElementById('leadAdditionalInfo').value.trim()
+            };
+
+            try {
+                if (editingLeadId) {
+                    // Update existing lead
+                    const index = sellerLeads.findIndex(l => l.id == editingLeadId);
+                    if (index !== -1) {
+                        sellerLeads[index] = {
+                            ...sellerLeads[index],
+                            ...formData
+                        };
+                        await CloudStorage.saveData('SellerLeads', sellerLeads);
+                        AXTUtils.showSuccessMessage('Lead updated successfully!');
+                    }
+                } else {
+                    // Add new lead
+                    const newLead = {
+                        ...formData,
+                        id: Date.now(),
+                        dateSubmitted: new Date().toISOString()
+                    };
+                    sellerLeads.push(newLead);
+                    await CloudStorage.saveData('SellerLeads', sellerLeads);
+                    AXTUtils.showSuccessMessage('Lead added successfully!');
+                }
+
+                closeAddEditLeadModal();
+                updateLeadsTable();
+                updateStats();
+            } catch (error) {
+                console.error('Error saving lead:', error);
+                AXTUtils.showErrorMessage('Failed to save lead. Please try again.');
+            }
+        });
+
+        // ========== ADD/EDIT JV DEAL MODAL FUNCTIONS ==========
+        function openAddJVModal() {
+            editingJVId = null;
+            document.getElementById('jvModalTitle').textContent = 'ADD JV DEAL';
+            document.getElementById('addEditJVForm').reset();
+            document.getElementById('jvStatus').value = 'new';
+            document.getElementById('addEditJVModal').classList.remove('hidden');
+        }
+
+        function openEditJVModal(id) {
+            const jv = jvDeals.find(j => j.id == id);
+            if (!jv) return;
+
+            editingJVId = id;
+            document.getElementById('jvModalTitle').textContent = 'EDIT JV DEAL';
+
+            document.getElementById('jvFirstName').value = jv.firstName || '';
+            document.getElementById('jvLastName').value = jv.lastName || '';
+            document.getElementById('jvEmailAddress').value = jv.emailAddress || '';
+            document.getElementById('jvPhoneNumber').value = jv.phoneNumber || '';
+            document.getElementById('jvDealAddress').value = jv.dealAddress || '';
+            document.getElementById('jvContractPrice').value = jv.contractPrice || '';
+            document.getElementById('jvARV').value = jv.arv || '';
+            document.getElementById('jvRepairsEstimate').value = jv.repairsEstimate || '';
+            document.getElementById('jvAgreement').value = jv.jvAgreement || '';
+            document.getElementById('jvStatus').value = jv.status || 'new';
+
+            document.getElementById('addEditJVModal').classList.remove('hidden');
+        }
+
+        function closeAddEditJVModal() {
+            document.getElementById('addEditJVModal').classList.add('hidden');
+            document.getElementById('addEditJVForm').reset();
+            editingJVId = null;
+        }
+
+        document.getElementById('addEditJVForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('jvFirstName').value.trim(),
+                lastName: document.getElementById('jvLastName').value.trim(),
+                emailAddress: document.getElementById('jvEmailAddress').value.trim(),
+                phoneNumber: document.getElementById('jvPhoneNumber').value.trim(),
+                dealAddress: document.getElementById('jvDealAddress').value.trim(),
+                contractPrice: parseInt(document.getElementById('jvContractPrice').value),
+                arv: parseInt(document.getElementById('jvARV').value),
+                repairsEstimate: parseInt(document.getElementById('jvRepairsEstimate').value),
+                jvAgreement: document.getElementById('jvAgreement').value,
+                status: document.getElementById('jvStatus').value
+            };
+
+            try {
+                if (editingJVId) {
+                    // Update existing JV deal
+                    const index = jvDeals.findIndex(j => j.id == editingJVId);
+                    if (index !== -1) {
+                        jvDeals[index] = {
+                            ...jvDeals[index],
+                            ...formData
+                        };
+                        await CloudStorage.saveData('JointVentures', jvDeals);
+                        AXTUtils.showSuccessMessage('JV deal updated successfully!');
+                    }
+                } else {
+                    // Add new JV deal
+                    const newJV = {
+                        ...formData,
+                        id: Date.now(),
+                        dateSubmitted: new Date().toISOString(),
+                        type: 'jv-deal'
+                    };
+                    jvDeals.push(newJV);
+                    await CloudStorage.saveData('JointVentures', jvDeals);
+                    AXTUtils.showSuccessMessage('JV deal added successfully!');
+                }
+
+                closeAddEditJVModal();
+                updateJVTable();
+                updateJVStats();
+            } catch (error) {
+                console.error('Error saving JV deal:', error);
+                AXTUtils.showErrorMessage('Failed to save JV deal. Please try again.');
+            }
         });
     </script>
 
