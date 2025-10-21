@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Tech Properties - Fast Cash for Your Property</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-bebas { font-family: 'Bebas Neue', sans-serif; }
+
+        .gradient-dark {
+            background: linear-gradient(135deg, #41413f 0%, #2a2a29 50%, #1a1a19 100%);
+        }
+
+        .gradient-gold {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple': '#8b5cf6',
+                        'brand-purple-dark': '#7c3aed',
+                        'brand-charcoal': '#41413f',
+                        'brand-charcoal-dark': '#2a2a29'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="images/axt-logo.png" alt="Empower Tech Properties" class="h-16 w-auto">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#advantages" class="text-gray-700 hover:text-brand-purple font-semibold transition py-2">Advantages</a>
+                    <a href="#process" class="text-gray-700 hover:text-brand-purple font-semibold transition py-2">Process</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-brand-purple font-semibold transition py-2">Testimonials</a>
+                    <a href="joint-ventures.html" class="text-gray-700 hover:text-brand-purple font-semibold transition py-2">Joint Ventures</a>
+                    <a href="#contact" class="gradient-gold text-brand-charcoal px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition transform hover:scale-105">Get Offer</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#advantages" class="block py-3 text-gray-700 hover:text-brand-purple font-semibold transition">Advantages</a>
+                <a href="#process" class="block py-3 text-gray-700 hover:text-brand-purple font-semibold transition">Process</a>
+                <a href="#testimonials" class="block py-3 text-gray-700 hover:text-brand-purple font-semibold transition">Testimonials</a>
+                <a href="joint-ventures.html" class="block py-3 text-gray-700 hover:text-brand-purple font-semibold transition">Joint Ventures</a>
+                <a href="#contact" class="block py-3 text-brand-purple font-bold">Get Offer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-dark py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="font-bebas text-5xl lg:text-7xl mb-6 leading-tight tracking-wide">
+                        SELL YOUR PROPERTY<br>
+                        <span class="text-brand-purple">FAST & SIMPLE</span>
+                    </h2>
+                    <p class="text-xl lg:text-2xl mb-4 text-gray-300 font-medium">
+                        Direct cash purchase. No agents, no fees, no delays.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-8">
+                        We buy houses in any condition. Get a fair cash offer within 24 hours and close on your timeline.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="gradient-gold text-brand-charcoal px-8 py-4 rounded-lg font-bold text-lg shadow-2xl hover:shadow-3xl transition transform hover:scale-105 text-center">
+                            Get Cash Offer Now
+                        </a>
+                        <a href="tel:206-920-3637" class="bg-white text-brand-charcoal px-8 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transition transform hover:scale-105 text-center flex items-center justify-center space-x-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>(214) 972-9659</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block">
+                    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/20">
+                        <h3 class="font-bebas text-3xl text-white mb-6 tracking-wide">WHY CHOOSE Empower Tech Properties?</h3>
+                        <ul class="space-y-4 text-white">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 text-brand-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-lg">Cash offers within 24 hours</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 text-brand-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-lg">Close on your schedule</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 text-brand-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-lg">Zero commissions or fees</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 text-brand-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-lg">Buy as-is, any condition</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-bebas text-5xl text-gray-900 mb-4 tracking-wide">OUR ADVANTAGES</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We provide straightforward solutions for property sellers who value speed, certainty, and simplicity.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Advantage 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">INSTANT CASH</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Direct payment to you. No waiting for buyer financing or bank approvals.
+                    </p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">RAPID CLOSING</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Close in as little as 7 days, or on a timeline that works for you.
+                    </p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">ANY CONDITION</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        No repairs, no cleaning, no staging. We buy properties exactly as they are.
+                    </p>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">ZERO FEES</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        No agent commissions, no closing costs, no hidden fees. Keep more money.
+                    </p>
+                </div>
+
+                <!-- Advantage 5 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">GUARANTEED</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        No deal falling through. Our offers are firm and backed by immediate funds.
+                    </p>
+                </div>
+
+                <!-- Advantage 6 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">CONFIDENTIAL</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Private transactions handled with complete discretion and professionalism.
+                    </p>
+                </div>
+
+                <!-- Advantage 7 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">EXPERIENCED</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Years of experience in real estate acquisitions across multiple markets.
+                    </p>
+                </div>
+
+                <!-- Advantage 8 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition border border-gray-200">
+                    <div class="w-16 h-16 mb-4 text-brand-purple">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bebas text-2xl text-gray-900 mb-3 tracking-wide">LOCAL EXPERTS</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Deep knowledge of local market conditions ensures fair, competitive offers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-bebas text-5xl text-gray-900 mb-4 tracking-wide">SIMPLE 3-STEP PROCESS</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We've streamlined property sales into three straightforward steps.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                        <span class="font-bebas text-4xl text-brand-charcoal">1</span>
+                    </div>
+                    <h3 class="font-bebas text-3xl text-gray-900 mb-4 tracking-wide">CONTACT US</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Fill out our form or call us directly. Provide basic information about your property.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                        <span class="font-bebas text-4xl text-brand-charcoal">2</span>
+                    </div>
+                    <h3 class="font-bebas text-3xl text-gray-900 mb-4 tracking-wide">GET OFFER</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Receive a fair, no-obligation cash offer within 24 hours. No pressure, no gimmicks.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                        <span class="font-bebas text-4xl text-brand-charcoal">3</span>
+                    </div>
+                    <h3 class="font-bebas text-3xl text-gray-900 mb-4 tracking-wide">CLOSE DEAL</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Accept our offer and choose your closing date. Get paid and move on with your life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block gradient-gold text-white px-10 py-4 rounded-lg font-bold text-lg shadow-2xl hover:shadow-3xl transition transform hover:scale-105">
+                    Start Process Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-bebas text-5xl text-gray-900 mb-4 tracking-wide">CLIENT TESTIMONIALS</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See what property sellers are saying about their experience with Empower Tech Properties.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="flex mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic leading-relaxed">
+                        "Professional, efficient, and true to their word. Empower Tech Properties made selling my inherited property incredibly easy. Closed in 10 days."
+                    </p>
+                    <p class="font-bold text-gray-900">Michael R.</p>
+                    <p class="text-sm text-gray-600">Phoenix, AZ</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="flex mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic leading-relaxed">
+                        "After a job relocation, I needed to sell quickly. Empower Tech gave me a fair price and handled everything. Couldn't ask for more."
+                    </p>
+                    <p class="font-bold text-gray-900">Jennifer K.</p>
+                    <p class="text-sm text-gray-600">Austin, TX</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="flex mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic leading-relaxed">
+                        "My rental property needed major repairs. ETP bought it as-is with no hassle. The whole process was straightforward and transparent."
+                    </p>
+                    <p class="font-bold text-gray-900">David L.</p>
+                    <p class="text-sm text-gray-600">Denver, CO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 gradient-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-bebas text-5xl text-white mb-4 tracking-wide">GET YOUR CASH OFFER</h2>
+                <p class="text-xl text-gray-300">
+                    Fill out the form below and receive a fair cash offer within 24 hours.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
+                <form id="contactForm">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name*</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                                placeholder="John"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name*</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                                placeholder="Smith"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email*</label>
+                            <input
+                                type="email"
+                                id="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                                placeholder="john@example.com"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-bold mb-2">Phone*</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                                placeholder="(555) 123-4567"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="propertyAddress" class="block text-gray-700 font-bold mb-2">Property Address*</label>
+                        <input
+                            type="text"
+                            id="propertyAddress"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                            placeholder="123 Main St, City, State, ZIP"
+                            required
+                        >
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="propertyType" class="block text-gray-700 font-bold mb-2">Property Type*</label>
+                        <select
+                            id="propertyType"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                            required
+                        >
+                            <option value="">Select Type</option>
+                            <option value="single-family">Single Family Home</option>
+                            <option value="multi-family">Multi-Family</option>
+                            <option value="condo">Condo/Townhouse</option>
+                            <option value="land">Land/Lot</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="propertyCondition" class="block text-gray-700 font-bold mb-2">Property Condition*</label>
+                        <select
+                            id="propertyCondition"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                            required
+                        >
+                            <option value="">Select Condition</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="fair">Fair</option>
+                            <option value="needs-work">Needs Work</option>
+                            <option value="major-repairs">Major Repairs Needed</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="timeline" class="block text-gray-700 font-bold mb-2">Timeline to Sell*</label>
+                        <select
+                            id="timeline"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                            required
+                        >
+                            <option value="">Select Timeline</option>
+                            <option value="asap">ASAP (Within 2 weeks)</option>
+                            <option value="1-month">Within 1 Month</option>
+                            <option value="1-3-months">1-3 Months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8">
+                        <label for="additionalInfo" class="block text-gray-700 font-bold mb-2">Additional Information</label>
+                        <textarea
+                            id="additionalInfo"
+                            rows="4"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition text-gray-900"
+                            placeholder="Tell us anything else about your property or situation..."
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full gradient-gold text-brand-charcoal py-4 rounded-lg font-bebas text-2xl tracking-wide shadow-2xl hover:shadow-3xl transition transform hover:scale-105"
+                    >
+                        SUBMIT & GET OFFER
+                    </button>
+
+                    <div class="mt-4 text-center text-sm text-gray-600 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                        <span>Your information is secure and confidential</span>
+                    </div>
+                </form>
+
+                <div id="successMessage" class="hidden mt-6 bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
+                    <p class="font-bold">Thank you! Your request has been submitted.</p>
+                    <p class="text-sm mt-1">We'll contact you within 24 hours with a cash offer.</p>
+                </div>
+
+                <div id="errorMessage" class="hidden mt-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                    <p class="font-bold">Error submitting your request.</p>
+                    <p class="text-sm mt-1">Please try again or call us at (214) 972-9659.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="mb-4">
+                        <img src="images/axt-logo.png" alt="Empower Tech Properties" class="h-12 w-auto mb-2">
+                    </div>
+                    <p class="text-gray-400">
+                        Professional real estate acquisitions. Fast, fair, and reliable cash offers.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bebas text-xl mb-4 tracking-wide">QUICK LINKS</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#advantages" class="text-gray-400 hover:text-white transition">Advantages</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-white transition">Process</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="joint-ventures.html" class="text-gray-400 hover:text-white transition">Joint Ventures</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Get Offer</a></li>
+                        <li><a href="login.html" class="text-gray-400 hover:text-white transition">Dashboard Login</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bebas text-xl mb-4 tracking-wide">CONTACT</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-400">(214) 972-9659</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400">jack@empowertech.me</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-brand-purple mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">Nationwide Service</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Empower Tech Properties. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK v8 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
